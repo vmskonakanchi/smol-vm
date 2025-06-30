@@ -14,6 +14,7 @@ const (
 	OP_GOTO         string = "goto"
 	OP_END          string = "end"
 	OP_BEGIN        string = "begin"
+	OP_CALL         string = "call"
 	OP_RETURN       string = "return"
 	OP_ADD          string = "+"
 	OP_SUBRACT      string = "-"

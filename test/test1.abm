@@ -1,0 +1,16 @@
+show starting program
+goto abc
+show abc completed
+show f value is
+print
+halt
+
+label abc
+    lvalue f
+    push 5
+    :=
+    lvalue x
+    push 0
+    :=
+    rvalue f
+return

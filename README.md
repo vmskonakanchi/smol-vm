@@ -89,13 +89,13 @@ The VM consists of several key components:
 
 ```bash
 git clone https://github.com/vmskonakanchi/smol-vm.git
-cd abm-vm
+cd smol-vm
 ```
 
 2. Build the virtual machine:
 
 ```bash
-go build -o abm-vm
+go build -o smol-vm
 ```
 
 ### Running Programs

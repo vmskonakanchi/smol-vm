@@ -70,7 +70,7 @@ func main() {
 			// halt the running program
 			return
 		case OP_SHOW:
-			log.Printf(data)
+			log.Print(data)
 		case OP_PUSH:
 			val, err := strconv.Atoi(data)
 			if err != nil {
@@ -122,11 +122,11 @@ func main() {
 
 			stack.Push(StackItem{
 				name:  data,
-				value: GetValue(address),
+				value: address,
 			})
 
 		case OP_GOTO:
-			// go to the lable line and start ececuting from there
+			// go to the lable line and start executing from there
 			sp = i
 			labelLine, exists := labels[data]
 
@@ -136,6 +136,12 @@ func main() {
 
 			// moving the current index to the lable line to process from there
 			i = labelLine
+		case OP_BEGIN:
+			// nothing as of now
+		case OP_CALL:
+			// call
+		case OP_END:
+			// end
 		case OP_RETURN:
 			i = sp
 		case OP_ADD:
