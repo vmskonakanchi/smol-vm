@@ -1,4 +1,4 @@
-# ABM Virtual Machine 🚀
+# SMOL Virtual Machine 🚀
 
 A stack-based virtual machine implementation in Go that executes programs written in ABM (Abstract Machine) language. This project was built for fun and educational purposes to explore virtual machine concepts and stack-based computation.
 
@@ -103,13 +103,13 @@ go build -o abm-vm
 Execute an ABM program:
 
 ```bash
-./abm-vm <filename.abm>
+./smol-vm <filename.abm>
 ```
 
 Example:
 
 ```bash
-./abm-vm test/first.abm
+./smol-vm test/first.abm
 ```
 
 ## 📝 Example Programs
