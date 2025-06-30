@@ -1,0 +1,10 @@
+show This is my first program
+lvalue f
+push 5
+:=
+lvalue x
+push 0
+:=
+rvalue f
+print
+halt
