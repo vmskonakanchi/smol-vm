@@ -122,7 +122,7 @@ func main() {
 
 			stack.Push(StackItem{
 				name:  data,
-				value: address,
+				value: GetValue(address),
 			})
 
 		case OP_GOTO:
@@ -137,9 +137,18 @@ func main() {
 			// moving the current index to the lable line to process from there
 			i = labelLine
 		case OP_BEGIN:
-			// nothing as of now
+			// nothing to do
 		case OP_CALL:
-			// call
+			// store the called line in a variable so that we can get back to it when called RETURN instruction
+			sp = i
+			labelLine, exists := labels[data]
+
+			if !exists {
+				log.Fatalf("No label named %s exists", data)
+			}
+
+			// moving the current index to the label line to process from there
+			i = labelLine
 		case OP_END:
 			// end
 		case OP_RETURN:

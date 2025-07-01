@@ -6,5 +6,15 @@ lvalue x
 push 0
 :=
 rvalue f
+goto work
+show the value of f is
+print
+rvalue g
+show the value of g is
 print
 halt
+label work
+    rvalue g
+    push 2
+    +
+return
